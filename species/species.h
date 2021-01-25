@@ -1,42 +1,73 @@
+//
+//  species.h
+//  Orville
+//
+//  Created by Zhao Dong on 1/23/21.
+//
+#ifndef SPECIES_H
+#define SPECIES_H
 
+#include <string>
 
-class species{
+class Eevak{
 private:
-    string _name, _gender;
-    int _age;
-    double _height, _weight;
+    bool _isRunning;
+
 public:
-    species(){
-        std::cout << "Eevaks are four-legged equines that can run." << std:: ednl;
-    }
-    void set_name(set_n){
-        _name = set_n;
-    }
-    string get_name(get_n){
-        return _name;
-    }
-    void set_gender(set_g){
-        _gender = set_g;
-    }
-    string get_gender(){
-        return _gender;
-    }
-    void set_age(set_a){
-        _age = set_a;
-    }
-    int get_age(){
-        return _age;
-    }
-    void set_height(set_h){
-        _height = set_h;
-    }
-    double get_height(){
-        return _height;
-    }
-    void set_weight(set_w){
-        _weight = set_w;
-    }
-    double get_weight(){
-        return _weight;
-    }
-}
+    Eevak();
+    bool isRunning();
+    void run();
+    void stop();
+
+   
+};
+class Gelatin{
+    private:
+    int _weight;
+    std::string _shape;
+    public:
+    Gelatin(int weight);
+    bool operator != (const Gelatin& rhs)const;
+    int weight();
+
+    const char* shape();
+    void morph(std::string shape = "sphere");
+    Gelatin split();
+
+
+};
+
+
+class Humanoid{
+    private:
+    double _height;
+    int _weight;
+    public:
+    Humanoid(double height, int weight);
+    virtual ~Humanoid() = default;
+    double height();
+    int weight();
+    
+
+};
+
+class Human:public Humanoid{
+    private:
+    bool _isMale;
+    public:
+    Human(bool isMale, double height, int weight);
+    bool isMale();
+};
+
+class Kaylon:public Humanoid{
+    private:
+    bool _isFiring;
+    public:
+    Kaylon(double height, int weight);
+    bool isFiring();
+    void startFiring();
+    void stopFiring();
+};
+
+class 
+#endif

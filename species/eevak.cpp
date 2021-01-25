@@ -15,7 +15,7 @@ int main() {
     std::string gender, name;
     
     std::cin >> age >> name >> weight >> height;
-    
+    std::cout << "Eevaks are four-legged equines that can run." << std:: ednl;
     eevak ee;
     ee.set_age(age);
     
