@@ -69,5 +69,17 @@ class Kaylon:public Humanoid{
     void stopFiring();
 };
 
-class 
+class Moclan:public Humanoid{
+    private:
+    bool _isEgg;
+    public:
+    Moclan(double height, int weight);
+    bool isEgg();
+    Moclan layEgg();
+    void hatch();
+
+
+};
+
+
 #endif

@@ -7,17 +7,16 @@
 
 #include <iostream>
 #include <string>
-#include "apecies.h"
+#include "species.h"
 
-int main() {
-    int age;
-    double weight, height;
-    std::string gender, name;
-    
-    std::cin >> age >> name >> weight >> height;
-    std::cout << "Eevaks are four-legged equines that can run." << std:: ednl;
-    eevak ee;
-    ee.set_age(age);
-    
-    
-}
+Eevak::Eevak()
+    :_isRunning(false){}
+bool Eevak::isRunning(){
+    return _isRunning;
+    }
+void Eevak::run(){
+    _isRunning = true;
+    }
+void Eevak::stop(){
+    _isRunning = false;
+    }
